@@ -1,0 +1,29 @@
+application: tkp-timer
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /css
+  static_dir: css
+
+- url: /js
+  static_dir: js
+
+- url: /assets
+  static_dir: assets
+
+- url: /upload
+  script: photos.app
+
+- url: /photo
+  script: photos.app
+
+- url: /screenshots
+  script: screenshots.app
+
+- url: /screenshots/.*
+  script: screenshots.app
+
+- url: /.*
+  script: main.app
