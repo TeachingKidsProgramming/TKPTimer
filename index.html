@@ -33,24 +33,6 @@
             left: 10px;
             top: 10px;
         }
-
-        .screenshot {
-            max-height: 250px;
-            max-width: 250px;
-            padding: 10px;
-
-        }
-        
-        .dropdown-toggle {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            font-size: 16px;
-            font-weight: bold;
-            height: 44.5454521179199px;
-       }
-
     </style>
 </head>
 
@@ -66,45 +48,28 @@
                             <img src="assets/TKP_Logo_Final_reversed_out.png" class="logo">
                         </a>
                     </h3>
-
-                   <!-- <nav>
-                        <ul class="nav masthead-nav">
-                            <li>
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
-                                            data-toggle="dropdown" aria-expanded="true">Classroom<span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#" ng-click="selectClass('All Classes')">
-                                            All Classrooms</a></li>
-                                        <li role="presentation" ng-repeat="image in screenshots | unique:'classroom' | orderBy:'classroom'">
-                                            <a role="menuitem" tabindex="-1" href="#" ng-click="selectClass(image.classroom)">
-                                            {{image.classroom}}
-                                        </a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>-->
                 </div>
             </div>
 
               <div>
-                <div class="clock"></div>              
+                <div class="clock"><h2>Clock</h2></div>              
                          <script type="text/javascript">
-                            var clock = $('.clock').FlipClock(250, {
+                            var clock = $('.clock').FlipClock(300, {
+                            countdown: true,
+                            autoStart: false,
+                            clockFace: 'MinuteCounter'
+                            });
+                        </script>
+            </div><br/>
+
+            <div>
+                <div class="clock1"><h2>Clock 1</h2></div>              
+                         <script type="text/javascript">
+                            var clock1 = $('.clock1').FlipClock(300, {
                             countdown: true,
                             clockFace: 'MinuteCounter'
                             });
                         </script>
-
-                <!--<div class="row clearfix">
-                    <h1>{{className}}</h1>
-                      <div class="col-1-3" ng-repeat="image in screenshots | byClass:className">
-                          <div><img ng-src="screenshots/{{image.created}}/{{image.classroom | escape}}.{{image.student | escape}}" class="screenshot"></div>
-                          {{image.classroom}}/{{image.student}}</div>
-                </div>
-               </div>-->
             </div>
         </div>
     </div>
